@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>CineGems</title>
+		<link rel="stylesheet" media="screen" href="style.css">
+		<link href="slider.css" rel="stylesheet" type="text/css">
+<script language="JavaScript">
+			function dosearch() {
+			var sf=document.searchform;
+			var submitto = sf.sengine.value + escape(sf.searchterms.value);
+			window.location.href = submitto;
+			return false;
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div id="container">
+			<p class="error">Don't walk past me as if we are strangers	
+				
+			<p class="error">CINEGEMS</p>
+			</p>
+
+			<div class="content">
+				<h2>世间所有的相遇都是久别重逢</h2>
+				
+				<p class="text">
+					<img src="images/CINEGEMS图标(1)（1）.png" class="transparent-img">
+					
+					<form id="loginForm">
+						<input type="text" id="username" placeholder="用户名" required>
+						<input type="password" id="password" placeholder="密码" required>
+						<p id="errorMsg" class="error"></p>
+						<button type="submit" href="./index1.html">登录</button>
+					</form>
+				</p>
+				<p class="links">
+					<a id="button" href="index.html">&larr; Back</a> <a href="#">用户注册</a> <a href="#">猜你喜欢</a> <a href="#">访客登录</a> 
+						
+				</p>
+				
+				<script>
+					// 模拟已有用户列表，用户不能使用这些用户名  
+					const existingUsers = ["user1", "user2", "admin"];
+			
+					document.getElementById('loginForm').addEventListener('submit', function (event) {
+						event.preventDefault();  // 防止表单默认提交  
+			
+						const username = document.getElementById('username').value;
+						const password = document.getElementById('password').value;
+						const errorMsg = document.getElementById('errorMsg');
+			
+						// 清除之前的错误消息  
+						errorMsg.textContent = "";
+			
+						// 检查用户名是否已存在  
+						if (existingUsers.includes(username)) {
+							errorMsg.textContent = "用户名已存在，请选择其他用户名。";
+							return;
+						}
+			
+						// 检查用户名和密码是否都填写了（这一步其实可以省略，因为input已经设置了required）  
+						// 但为了示例的完整性，我还是保留了下来  
+						if (username === "" || password === "") {
+							errorMsg.textContent = "请输入用户名和密码。";
+							return;
+						}
+						console.log("开始跳转");
+						// 如果验证通过，跳转到其他页面  
+						window.location.href = "./index1.html"; // 如果文件在当前目录
+					});  
+				</script>		
+				
+				<video autoplay muted loop id="background-video">
+					<source src="./images/background-video.mp4" type="video/mp4">
+					您的浏览器不支持 HTML5 视频标签。
+				</video>	
+				
+			</div>
+		</div>
+	</body>
+</html>
