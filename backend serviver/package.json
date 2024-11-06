@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "node_moudle": "file:node_moudle"
+  }
+}

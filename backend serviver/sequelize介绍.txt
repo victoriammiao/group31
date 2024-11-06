@@ -1,0 +1,8 @@
+Sequelize
+Sequelize 是一个基于 JavaScript 的 ORM（Object-Relational Mapping） 库，用于与关系型数据库交互。它可以简化数据库操作，使得开发者不需要编写复杂的 SQL 语句，而是通过对象的方式来操作数据库。Sequelize 支持多种关系型数据库，包括 MySQL、PostgreSQL、SQLite 和 Microsoft SQL Server。
+
+特点
+跨数据库支持：支持 MySQL、PostgreSQL、SQLite 和 SQL Server，可以轻松更换数据库。
+模型定义：允许通过 JavaScript 类或对象来定义数据库模型，每个模型通常对应数据库中的一张表。
+数据验证：提供数据验证功能，可以确保数据在保存到数据库前符合指定规则。
+支持关联关系：Sequelize 支持一对一、一对多、多对多等关联关系，并可以进行关联查询。
